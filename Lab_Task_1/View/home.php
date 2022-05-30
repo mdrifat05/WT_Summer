@@ -3,7 +3,7 @@
     <title>My Home</title>
 </head>
 <body>
-    <h1>Home</h1>
+    <h1>Registration Form</h1><hr>
 <form action="../control/process.php" method="POST">
 <table>
     <tr><td>First Name</td> 
