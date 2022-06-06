@@ -13,30 +13,21 @@ if(strlen($_REQUEST["l_name"])<5)
     echo "<br>Last Name should be more than 4 characters.";
 }
 
-if(isset($sen))
+if(isset($_REQUEST["dg"]))
 {
-    $jen=$_POST['dg'];
+    $deg=$_POST['dg'];
 }
 
-if(!isset($jun))
+if(!isset($deg))
 {
     echo "<br>Designation must be selected";
 }
 
-if(isset($l_java))
+if(isset($_POST['java']) || isset($_POST['php'])||isset($_POST['cpp']))
 {
-    $l_java=$_POST['java'];
+    
 }
-if(isset($l_php))
-{
-    $l_php=$_POST['php'];
-}
-if(isset($cpp))
-{
-    $l_cpp=$_POST['c++'];
-}
-
-if(!isset($l_java) || !isset($l_php)||!isset($l_cpp))
+else
 {
     echo "<br>Preferred language must be selected";
 }
