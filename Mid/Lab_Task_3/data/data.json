@@ -1,0 +1,52 @@
+[
+    {
+        "First_name": "Rifat",
+        "Last_name": "Hossen",
+        "Age": "22",
+        "Designation": "junior programmer",
+        "Preferred_Language": "Java , PHP , Cpp",
+        "Email": "mdrifat2103@gmail.com",
+        "password": "12345",
+        "file": "G2.pdf"
+    },
+    {
+        "First_name": "Alex",
+        "Last_name": "me",
+        "Age": "22",
+        "Designation": "junior programmer",
+        "Preferred_Language": "Java , PHP",
+        "Email": "mdrifat2103@gmail.com",
+        "password": "123",
+        "file": "G2.pdf"
+    },
+    {
+        "First_name": "",
+        "Last_name": "",
+        "Age": "",
+        "Designation": "",
+        "Preferred_Language": "",
+        "Email": "",
+        "password": "",
+        "file": ""
+    },
+    {
+        "First_name": "",
+        "Last_name": "",
+        "Age": "",
+        "Designation": "",
+        "Preferred_Language": "",
+        "Email": "",
+        "password": "",
+        "file": "G2.pdf"
+    },
+    {
+        "First_name": "",
+        "Last_name": "",
+        "Age": "",
+        "Designation": "",
+        "Preferred_Language": "",
+        "Email": "",
+        "password": "",
+        "file": ""
+    }
+]

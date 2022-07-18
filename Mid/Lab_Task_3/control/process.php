@@ -1,4 +1,5 @@
 <?php
+session_start();
 $pass_Error ="";
 if(isset($_REQUEST["submit"]))
 {
@@ -11,6 +12,9 @@ $user_pass=$_REQUEST['pass'];
 if(strlen($_REQUEST["f_name"])<5)
 {
     echo "<br>First Name should be more than 4 characters.";
+}
+else{
+    $_SESSION["f-name"]=$name;
 }
 if(strlen($_REQUEST["l_name"])<5)
 {
@@ -82,7 +86,7 @@ if (preg_match("/^[a-zA-Z-' ]*$/",$user_pass))
 
 //file upload    
 echo "<br>";
-echo $_FILES["myfile"]["name"];
+echo "The uploaded file name is" .$_FILES["myfile"]["name"];
 echo "<br>";
 if(move_uploaded_file($_FILES["myfile"]["tmp_name"],"../uploads/".$_FILES["myfile"]["name"]))
 {
@@ -106,8 +110,12 @@ $mydata = array(
 );
 
 //json work
-    $jsondata=json_encode($mydata, JSON_PRETTY_PRINT);
-    if(file_put_contents("../data/data.json",$jsondata))
+$existing_Data = file_get_contents('../data/data.json');
+$JsonData = json_decode($existing_Data);
+
+    $JsonData[] = $mydata;
+    $jd=json_encode($JsonData, JSON_PRETTY_PRINT);
+    if(file_put_contents("../data/data.json",$jd))
     {
         echo "<br>Data saved";
     }
