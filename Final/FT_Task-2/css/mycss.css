@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 0.1px;
+  background: #afcacd;
+}
+
+.header {
+  color: black;
+  padding: 25px;
+  text-align: left;
+  background: #b0dbeb;
+}
+.button {
+  color: black;
+  background: blue;
+  cursor: pointer;
+  margin-right: 10px;
+ 
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: rgb(221, 221, 221);
+  color: black;
+}
+
+.submit {
+  background-color: rgb(122, 139, 247);
+  color: black;
+  border-radius: 8px;
+  border: solid blue;
+  width: 100px;
+}
+.reset {
+  background-color: rgb(122, 139, 247);
+  color: black;
+  border-radius: 8px;
+  border: solid blue;
+  width: 100px;
+ 
+  
+}
+.reset:hover{
+  background-color: white;
+  color: black;
+ 
+ 
+}
+.submit:hover{
+  background-color: white;
+  color: black;
+ 
+}
+.header h1 {
+  font-size: 30px;
+}
+.header h2 {
+  color: #1624b9;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(30, 8, 51);
+}
+
+
+/* div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73ad21;
+} */
+
+td {
+  background-color: rgb(227, 205, 95);
+}
+
+div.middlecolumn {
+  position: relative;
+  left: 25%;
+  float: center;
+  width: 50%;
+}
+
+.registrationBox {
+  background-color: lightblue;
+  border-left: 15px solid lightseagreen;
+  padding: 2px;
+  font-size: 8px;
+}
