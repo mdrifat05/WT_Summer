@@ -1,7 +1,7 @@
 <?php
    include ("../model/db.php");
 
-   $firstname= $lastname=$age=$email=$password=$confirmpassword=$programming_language=$designation=$filename=$a=$b=$c=$d=$f=$g=$h="";
+   $firstname= $lastname=$age=$email=$password=$confirmpassword=$programming_language=$filename=$a=$b=$c=$d=$f=$g=$h="";
    
    if(isset($_POST["submit"]))
    {
@@ -40,7 +40,7 @@
    
    if(isset($_POST["designation"]))
    {
-       $d= "Designation =".$designation ;
+       $designation = $_POST["designation"];
    }
    else{
        $d= "Please select designation ";
