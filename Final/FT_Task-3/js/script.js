@@ -1,9 +1,8 @@
  function fname_check()
   {
     var fname = document.getElementById("fname").value;
-    var fname_pattern =  /^[A-Za-z]+$/;
-    var fn_check = fname_pattern.test(fname);
-    if (fn_check) 
+    var fname_pattern = /^[a-zA-Z\s]*$/;
+    if (fname_pattern.test(fname)) 
     {
         document.getElementById("errorfname").innerHTML="Name is correct";
         return true;
@@ -17,9 +16,8 @@
   function lname_check()
   {
     var lname = document.getElementById("lname").value;
-    var lname_pattern =  /^[A-Za-z]+$/;
-    var fn_check = lname_pattern.test(lname);
-    if (fn_check) 
+    var lname_pattern = /^[a-zA-Z\s]*$/;
+    if (lname_pattern.test(lname)) 
     {
         document.getElementById("errorlname").innerHTML="Name is correct";
         return true;
@@ -33,9 +31,8 @@
   function email_check()
   {
     var email = document.getElementById("email").value;
-    var email_pattern = /^\w+([-+.']\w+)*@[A-Za-z\d]+\.aiub.edu$/;
-    var em_check = email_pattern.test(email);
-    if (em_check) 
+    var email_pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (email_pattern.test(email)) 
     {
         document.getElementById("erroremail").innerHTML="email is correct";
         return true;
@@ -51,27 +48,23 @@
   {
     var age = document.getElementById("age").value;
     var age_pattern = /^[0-9]\d{1}$/;
-    var age_check = age_pattern.test(age);
-  
-    if (age_check) 
+    if (age_pattern.test(age)) 
     {
         document.getElementById("errorage").innerHTML="age is correct";
         return true;
     }
     else
     {
-        document.getElementById("errorage").innerHTML="Please use number";
+        document.getElementById("errorage").innerHTML="age is incorrect";
         return false;
     }
   }
 
-age_check();
   function pass_check()
   {
     var pass = document.getElementById("pass").value;
     var pass_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-    var pass_check = pass_pattern.test(pass);
-    if (pass_check) 
+    if (pass_pattern.test(pass)) 
     {
         document.getElementById("errorpass").innerHTML="passwared is correct ";
         return true;
@@ -82,7 +75,7 @@ age_check();
         return false;
     }
   }
-  function getradiovalue()
+  function radiovalue()
     {
         if(document.getElementById("junior").checked==true)
         {
@@ -106,7 +99,7 @@ age_check();
         }
     }
 
-    function getcheckvalue()
+    function checkvalue()
     {
         if(document.getElementById("php").checked==true)
         {
@@ -131,8 +124,9 @@ age_check();
     }
 function form_check()
 {
-    if(fname_check() == true && lname_check() == true && age_check() == true && email_check() == true && pass_check() == true && getradiovalue() == true && getcheckvalue() == true)
+    if(fname_check() == true && lname_check() == true && age_check() == true && email_check() == true && pass_check() == true && radiovalue() == true && checkvalue() == true)
     {
+        console.log('success');
         document.getElementById("errorform").innerHTML="All fields are ok";
         return true;
     }

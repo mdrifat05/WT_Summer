@@ -1,6 +1,6 @@
 <html>
     <body >
-        <h1 align="left">Registration Form</h1>
+        <h1 align="left">Registration Form</h1><hr>
         <form name="myForm" action="" onsubmit="return form_check()" method="post">
         <br>
         <table>
@@ -22,16 +22,16 @@
         <tr><td>
         Designation:
         </td><td>
-        <input type="radio" name="des" value ="Junior Programmer" id="junior" onclick="getradiovalue()" >Junior Programmer
-        <input type="radio" name="des" value ="Senior Programmer" id="senior" onclick="getradiovalue()" >Senior Programmer
-        <input type="radio" name="des" value ="Project Leader" id="plead" onclick="getradiovalue()" >Project Lead
+        <input type="radio" name="des" value ="Junior Programmer" id="junior" onkeyup="radiovalue()" >Junior Programmer
+        <input type="radio" name="des" value ="Senior Programmer" id="senior" onkeyup="radiovalue()" >Senior Programmer
+        <input type="radio" name="des" value ="Project Leader" id="plead" onkeyup="radiovalue()" >Project Lead
         </td></tr>
         <tr><td>
         Preferred language:
         </td><td>
-        <input type="checkbox" name="java" value="Java" id="java" onclick="getcheckvalue()">JAVA
-        <input type="checkbox" name="php" value="PHP" id="php" onclick="getcheckvalue()">PHP
-        <input type="checkbox" name="cpp" value="CPP" id="cpp" onclick="getcheckvalue()">C++
+        <input type="checkbox" name="java" value="Java" id="java" onkeyup="checkvalue()">JAVA
+        <input type="checkbox" name="php" value="PHP" id="php" onkeyup="checkvalue()">PHP
+        <input type="checkbox" name="cpp" value="CPP" id="cpp" onkeyup="checkvalue()">C++
         </td></tr>
         <tr><td>
         E-mail:
@@ -49,9 +49,8 @@
         <input type="file" name="file">
         </td></tr>
         <tr><td>
-        <input type="submit" name="submit" onclick="form_check()" name="submit"><p id="errorform"></p></td></tr>
-        </td><td>
-        <input type="reset" name="reset">
+        <input type="submit" name="submit" onclick="form_check()" name="submit">
+        <input type="reset" name="reset"><td><p id="errorform"></p></td>
         </td></tr>
     </table>
     </form>
